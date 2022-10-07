@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 500px;
+    height: 500px;
+    margin: 30px;
+}
+.title-container{
+    padding: 20px;
+    text-align: center;
+}
+.title{
+    color: #22A2A1;
+    font-size: 36px;
+}
+
+.skills{
+    font-size: 24px;
+    color: #22A2A1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.colum-skills{
+    width: 215px;
+}
+
+.skill-content{
+    display: flex;
+    justify-content: space-between;
+}
+.assess{
+    display: flex;
+}
+
+.rate{
+    color: #22A2A1;
+    margin-right: 5px;
+}
+.two-column{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.skill-content:hover{
+    background: gray;
+}
+
+
+.languages{
+    font-size: 24px;
+    color: #22A2A1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.see-profile-container{
+    text-align: center;
+}
+.text{
+    font-style: italic;
+}
+
+.button{
+    width: 180px;
+    background: #22A2A1;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 162px;
+}
+.text-button{
+    color: white;
+    font-size: 16px;
+}
+.text-button-container{
+    text-align: center;
+}
+

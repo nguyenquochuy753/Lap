@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.square-container1{
+    width: 100px;
+    height: 100px;
+    background: #dfe1e7;
+    border-top: 1px outset #687291;
+    margin: 10px;
+}
+.text{
+    font-size: 40px;
+    font-family: 'Tahoma';
+    text-align: center;
+}
+.square-container2 {
+    width: 100px;
+    height: 100px;
+    background: #eeeff2;
+    border-top: 1px outset #687291;
+    margin: 10px;
+}
+.square-container3 {
+    width: 100px;
+    height: 100px;
+    background: #687291;
+    border: 4px outset black;
+    margin: 10px;
+}
+.styleB{
+    display: flex;
+}
+.square-container4 {
+    width: 100px;
+    height: 150px;
+    background: #eeeff2;
+    border-left: 10px dotted #D0D0FF;
+    margin: 10px;
+}
+.square-container4:hover{
+    background: yellow;
+}
+.square-right{
+    position: absolute;
+    right: 0px;
+    width: 300px;
+}
+.square-container5{
+    width: 100px;
+    height: 150px;
+    background: #eeeff2;
+    border-left: 10px dotted #D0D0FF;
+    margin: 10px;
+}
+.square-container5:hover {
+    background: yellow;
+}
+
+.styleC{
+    height: 400px;
+    width: 300px;
+    background-image: linear-gradient(to right, red, yellow);
+    margin-top: 200px;
+    margin-left: 100px;
+    transition: width 2s;
+}
+h1{
+    font-family: 'Internet-specific';
+    text-shadow: 2px 2px;
+}
+
+.styleC:hover{
+    width: 400px;
+}
+.styleC:hover h1{
+    text-align: center;
+}

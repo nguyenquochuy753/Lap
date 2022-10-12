@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exercise2-2.css">
+    <script>
+        function changeColor() {
+                const background = document.querySelector('.container');
+                const title = document.querySelector('.title');
+                background.style.backgroundColor = 'pink';
+                title.style.color='black';
+            }
+    </script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="container">
+            <div class="profile">
+                <div class="text-header">
+                    <div class="title">Profile</div>
+                    <div>I'm a student</div>
+                </div>
+                <hr>
+                <div class="body-container">
+                    <div class="about-me-container">
+                        <div class="about-me">About me</div>
+                        <div>I am a lovely cat. I have passion in IT and I want to become data analyst</div>
+                    </div>
+                    <div class="img-container">
+                        <img src="./img/cat.png" alt="">
+                    </div>
+                    <div class="details-container">
+                        <div class="details">Details</div>
+                        <div>
+                            <h5>Name:</h5>
+                            Trần văn Boss
+                            <h5>Age:</h5>
+                            5 years
+                            <h5>Location:</h5>
+                            UIT , VNU - HCM
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="experiences">
+                <div class="title-container">
+                    <div class="title">Experiences</div>
+                </div>
+                <hr>
+                <div class="body-container">
+                    <div class="experience-content">
+                        <div class="content">
+                            <div class="experience-name">Education</div>
+                            <div class="time"><Strong>UIT,VNU-HCM</Strong><br>Apr 2019 - June 2024 </div>
+                        </div>
+                        <div class="discription">
+                            <h5>Information system</h5>
+                            The education was mainly System design-bassec course , but I also learned about web , data
+                            analyst and more ,...
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="body-container">
+                    <div class="experience-content">
+                        <div class="content">
+                            <div class="experience-name">Working Experinences</div>
+                            <div class="time"><Strong>UIT,VNU-HCM</Strong><br>Apr 2019 - June 2024 </div>
+                        </div>
+                        <div class="discription">
+                            <h5>Information system</h5>
+                            The education was mainly System design-bassec course , but I also learned about web , data
+                            analyst and more
+                            ,...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button style="margin-left: 490px;" onclick="changeColor()">
+            Change Color
+        </button>
+    </div>
+    
+</body>
+
+</html>

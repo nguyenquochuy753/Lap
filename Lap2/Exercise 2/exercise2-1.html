@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        DOM Button Object
+    </title>
+
+    <script>
+        function changeText() {
+            var doc = document.getElementById("btn");
+            doc.textContent = "Click me!";
+        }
+    </script>
+</head>
+<body style="text-align: center;">
+    <button type="button" id="btn" onclick="changeText()">
+        Try it
+    </button>
+</body>
+</html>

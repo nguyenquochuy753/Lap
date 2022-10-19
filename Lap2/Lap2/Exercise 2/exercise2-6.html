@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function testResults(form) {
+            let width = window.innerHeight;
+            let height = window.innerWidth;
+            alert(`Window Width: ${ width }; Window Height: ${ height }`);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" name="button" value="Get Width and Height of your Window" onClick="testResults(this.form)" />
+</body>
+
+</html>

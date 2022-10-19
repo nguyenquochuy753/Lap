@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--Registration form -->
+    <div>
+        <h1>Registration</h1>
+        <form onsubmit="registerUser()">
+            <input type="text" name="username" value="" id="name" required>
+            <input type="password" name="password" id="password" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Login form -->
+    <div>
+        <h1>Login</h1>
+        <input type="text" name="username" value="" id="loginName">
+        <input type="password" name="password" id="loginPassword">
+        <button onclick="checkLogin()">Submit</button>
+        <p id="LoginResult">Not logged in.</p>
+    </div>
+
+    <!-- Rankings table will be inserted here -->
+    <div id="RankingsTable"></div>
+
+    <script>
+        function registerUser() {
+            var nameInput = document.getElementById("name").value;
+            var pwdInput = document.getElementById("password").value;
+            if (nameInput !== "" && pwdInput !== "") {
+                var usrObj = {};
+                usrObj.username = nameInput;
+                usrObj.password = pwdInput;
+                usrObj.topscore = 0;
+                localStorage[nameInput] = JSON.stringify(usrObj);
+            }
+        }
+        function checkLogin() {
+            var loginResult = document.getElementById("LoginResult");
+            var nameInput = document.getElementById("loginName").value;
+            var pwdInput = document.getElementById("loginPassword").value;
+            console.log("Login name: " + nameInput + "; Login password" + pwdInput);
+            if (localStorage[nameInput] === undefined) {
+                loginResult.innerHTML = "User name incorrect";
+                return;
+            }
+            var usrObj = JSON.parse(localStorage[nameInput]);
+            if (pwdInput !== usrObj.password) {
+                loginResult.innerHTML = "Password incorrect";
+                return;
+            }
+
+            localStorage.loggedInUser = nameInput;
+
+            loginResult.innerHTML = "User logged in.";
+        }
+
+        function updateScore(newScore) {
+            var usrObj = JSON.parse(localStorage[localStorage.loggedInUser]);
+            usrObj.topscore = newScore;
+            localStorage[localStorage.loggedInUser] = JSON.stringify(usrObj);
+        }
+
+
+        function showRankingsTable() {
+            var rankingDiv = document.getElementById("RankingsTable");
+            var htmlStr = "";
+            htmlStr += "<h1>Rankings Table</h1>";
+            htmlStr += "<table>";
+            for (var key in localStorage) {
+                if (key !== "loggedInUser") {
+                    htmlStr += "David";
+                }
+            }
+            htmlStr += "</table>";
+        }
+
+    </script>
+</body>
+</html>

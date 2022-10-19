@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function testResults(form) {
+            var TestVar = form.inputbox.value;
+            var date=new Date();
+            var year=date.getFullYear();
+            var age = year-TestVar;
+            alert("Your age: " + age);
+        }
+    </script>
+</head>
+<body>
+    <form NAME="myform" ACTION="" METHOD="GET">Enter year of birth : <br>
+        <input TYPE="number" NAME="inputbox" VALUE="">
+        <P>
+            <input TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)">
+    </form>
+</body>
+</html>

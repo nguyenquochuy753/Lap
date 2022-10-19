@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculate</title>
+    <style>
+        .its {
+            width: 32%;
+            font-size: 20px;
+            color: blue;
+            margin: 0 auto;
+        }
+
+        #gets {
+            width: 289px;
+            height: 50px;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form style="background-color:grey;display:inline-block;height:325px;width:300px;padding:10px;">
+        <div style="text-align:center">580VN-ES PLUS</div>
+        <input type="text"
+            id="gets" value="">
+        </br>
+        <input type="button" value="0"
+            onClick="calc(this.value);" class="its">
+        <input type="button" value="1" onClick="calc(this.value);"
+            class="its">
+        <input type="button" value="+" onClick="calc(this.value);" class="its"> 
+        <input type="button"
+            value="2" onClick="calc(this.value);" class="its">
+        <input type="button" value="3" onClick="calc(this.value);"
+            class="its"><input type="button" value="-" onClick="calc(this.value);" class="its">
+        <input type="button"
+            value="4" onClick="calc(this.value);" class="its">
+        <input type="button" value="5" onClick="calc(this.value);"
+            class="its">
+        <input type="button" value="/" onClick="calc(this.value);" class="its">
+        <input type="button"
+            value="6" onClick="calc(this.value);" class="its">
+        <input type="button" value="7" onClick="calc(this.value);"
+            class="its">
+        <input type="button" value="*" onClick="calc(this.value);" class="its">
+        <input type="button"
+            value="8" onClick="calc(this.value);" class="its">
+        <input type="button" value="9" onClick="calc(this.value);"
+            class="its">
+        <input type="button" value="=" onClick="ev('gets');" class="its">
+        <input type="button"
+            value="sqrt" onClick="sqr('gets');" class="its">
+        <input type="button" value="%" onClick="calc(this.value);"
+            class="its">
+        <input type="button" value="CLR" onClick="clr('gets');" class="its">
+        <input type="button"
+            value="log" onClick="logit('gets');" class="its">
+        <input type="button" value="sin" onClick="trig('gets',Math.sin);" class="its">
+        <input type="button" value="tan"
+            onClick="trig('gets',Math.tan);" class="its">
+        <input type="button" value="cos" onClick="trig('gets',Math.cos);"
+            class="its">
+
+    </form>
+    <script>
+    function calc(i){
+        document.getElementById("gets").value +=i;
+    }
+    function ev(el){
+        var c=eval(document.getElementById("gets").value);	
+        document.getElementById("gets").value=c;
+    }
+    function clr(el){	
+        var m=document.getElementById(el);	
+        m.value="";}
+    function sqr(el){
+        var c=document.getElementById(el);
+        var v=Math.sqrt(c.value);c.value=v;
+    }
+    function logit(el){
+        var c=document.getElementById(el);	
+        var v=Math.log(c.value);	
+        c.value=v;
+    }
+    function trig(el, oprtr) { 
+        var m = document.getElementById(el); 
+        m.value = oprtr((m.value + 0)); 
+    }
+    </script>
+</body>
+
+</html>

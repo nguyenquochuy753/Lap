@@ -1,0 +1,7 @@
+.img1 {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 1rem;
+    border: 0.5rem solid #414C6A;
+    cursor: pointer;
+}

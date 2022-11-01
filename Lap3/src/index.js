@@ -33,7 +33,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <p>
+    {/* <p>
       Hello, <strong>JSX</strong>
     </p>
     <div>
@@ -91,7 +91,8 @@ root.render(
         </Card.Text>
         <Button variant="primary">Click me!</Button>
       </Card.Body>
-    </Card>
+    </Card> */}
+
   </React.StrictMode>
 );
 // const root = ReactDOM.createRoot(document.getElementById("root"));
